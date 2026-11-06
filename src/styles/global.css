@@ -1,3 +1,122 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: dark;
+  --bg-page: #120a2a;
+  --bg-surface: rgba(18, 10, 42, 0.92);
+  --bg-panel: rgba(15, 14, 35, 0.78);
+  --primary: #d39b42;
+  --primary-strong: #c9851e;
+  --text: #f5f7ff;
+  --muted: #dfe7ff;
+  --line: rgba(125, 140, 225, 0.25);
+  --input-bg: rgba(255, 255, 255, 0.02);
+  --input-border: rgba(255, 255, 255, 0.12);
+}
+
+html {
+  background: var(--bg-page);
+  scroll-behavior: smooth;
+}
+
+html:not(.dark) {
+  color-scheme: dark;
+  background: var(--bg-page);
+  --bg-page: #120a2a;
+  --bg-surface: rgba(18, 10, 42, 0.92);
+  --bg-panel: rgba(15, 14, 35, 0.78);
+  --primary: #d39b42;
+  --primary-strong: #c9851e;
+  --text: #f5f7ff;
+  --muted: #dfe7ff;
+  --line: rgba(125, 140, 225, 0.25);
+  --input-bg: rgba(255, 255, 255, 0.02);
+  --input-border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-page);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.card-section {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(181, 123, 51, 0.9);
+  background: linear-gradient(180deg, #c7852b, #b67623);
+  color: #f7f4ef;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.toggledark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(181, 123, 51, 0.95);
+  background: linear-gradient(180deg, #c7852b, #b67623);
+  color: #f7f4ef;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.minimal-input {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.minimal-input:focus {
+  border-color: rgba(211, 155, 66, 0.8);
+  box-shadow: 0 0 0 3px rgba(211, 155, 66, 0.17);
+}
+
+::selection {
+  background: rgba(211, 155, 66, 0.3);
+}
