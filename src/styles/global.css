@@ -22,28 +22,62 @@ html {
 }
 
 html:not(.dark) {
-  color-scheme: dark;
-  background: var(--bg-page);
-  --bg-page: #120a2a;
-  --bg-surface: rgba(18, 10, 42, 0.92);
-  --bg-panel: rgba(15, 14, 35, 0.78);
-  --primary: #d39b42;
-  --primary-strong: #c9851e;
-  --text: #f5f7ff;
-  --muted: #dfe7ff;
-  --line: rgba(125, 140, 225, 0.25);
-  --input-bg: rgba(255, 255, 255, 0.02);
-  --input-border: rgba(255, 255, 255, 0.12);
+  color-scheme: light;
+  background: #f8f7fb;
+  --bg-page: #f8f7fb;
+  --bg-surface: #ffffff;
+  --bg-panel: #ffffff;
+  --primary: #9a5c08;
+  --primary-strong: #804b05;
+  --text: #201a2e;
+  --muted: #4b4558;
+  --line: rgba(55, 39, 81, 0.18);
+  --input-bg: #ffffff;
+  --input-border: rgba(55, 39, 81, 0.22);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #120b2d;
+  background: var(--bg-page);
   color: var(--text);
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html:not(.dark) header {
+  background: #ffffff;
+  border-color: #e7e2ee;
+}
+
+html:not(.dark) header a {
+  color: #80500b;
+}
+
+html:not(.dark) #hero h1,
+html:not(.dark) #hero strong {
+  color: #201a2e;
+}
+
+html:not(.dark) #hero p,
+html:not(.dark) #about p,
+html:not(.dark) #projects p,
+html:not(.dark) #contact label {
+  color: #4b4558;
+}
+
+html:not(.dark) main section h2 {
+  color: #8a570e;
+}
+
+html:not(.dark) footer {
+  background: #eeeaf4;
+  border-color: #dcd5e6;
+}
+
+html:not(.dark) footer p {
+  color: #625a70;
 }
 
 * {
