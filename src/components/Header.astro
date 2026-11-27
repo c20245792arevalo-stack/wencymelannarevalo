@@ -1,17 +1,18 @@
-<header class="sticky top-0 z-50 bg-[#120a2a]/90 dark:bg-[#0b0f19]/90 backdrop-blur-md border-b border-blue-900/30 dark:border-slate-800/60">
-        <nav class="max-w-3xl mx-auto px-6 py-5 flex flex-wrap gap-4 justify-between items-center">
+<header
+  class="sticky top-0 z-50 bg-[#120a2a]/90 dark:bg-[#0b0f19]/90 backdrop-blur-md border-b border-blue-900/30 dark:border-slate-800/60"
+>
+  <nav class="max-w-3xl mx-auto px-6 py-5 flex justify-between md:justify-end items-center gap-8">
+    <ul class="hidden md:flex gap-8 list-none p-0 m-0 text-xs uppercase tracking-widest font-medium">
+      <li><a href="#about" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">About</a></li>
+      <li><a href="#skills" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">Skills</a></li>
+      <li><a href="#education" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">Education</a></li>
+      <li><a href="#projects" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">Projects</a></li>
+      <li><a href="#services" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">Services</a></li>
+      <li><a href="#contact" class="text-yellow-300/80 hover:text-[#eab308] transition-colors">Contact</a></li>
+    </ul>
 
-            <ul class="hidden md:flex gap-8 list-none p-0 m-0 text-xs uppercase tracking-widest font-medium">
-                <li><a href="#about" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">About</a></li>
-                <li><a href="#skills" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">Skills</a></li>
-                <li><a href="#education" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">Education</a></li>
-                <li><a href="#projects" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">Projects</a></li>
-                <li><a href="#services" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">Services</a></li>
-                <li><a href="#contact" class="text-yellow-300/80 hover:text-yellow-300 transition-colors">Contact</a></li>
-            </ul>
-
-            <div class="flex gap-3">
-                <button type="button" class="toggledark btn-primary text-sm" aria-pressed="true">Toggle Dark Mode</button>
-            </div>
-        </nav>
-    </header>
+    <button type="button" class="toggledark btn-primary !py-2 !px-4 text-xs ml-auto md:ml-0" aria-pressed="true">
+      Toggle Mode
+    </button>
+  </nav>
+</header>

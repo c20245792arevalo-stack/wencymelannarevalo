@@ -36,22 +36,33 @@ if (progress) {
   );
 }
 
-const togglebutton = document.querySelector(".toggledark");
 const tl = gsap.timeline({ defaults: { duration: 0.5, ease: "power2.out" } });
 
 tl.from("h1", { y: 60, opacity: 0, duration: 1 })
   .from("nav a", { y: -20, opacity: 0, stagger: 0.15 })
   .from("main section:not(#hero)", { y: 20, opacity: 0, stagger: 0.2 });
 
+const togglebutton = document.querySelector(".toggledark");
+
 if (togglebutton) {
   togglebutton.addEventListener("click", () => {
     const isDark = document.documentElement.classList.toggle("dark");
     togglebutton.setAttribute("aria-pressed", String(isDark));
+
     gsap.fromTo(
       togglebutton,
       { rotation: 0 },
-      { rotation: 360, duration: 0.8, ease: "back.out(1.7)" },
+      {
+        rotation: 360,
+        duration: 0.8,
+        ease: "power2.inOut",
+        overwrite: true,
+        onComplete: () => {
+          gsap.set(togglebutton, { rotation: 0 });
+        },
+      },
     );
+
     tl.restart();
   });
 }
